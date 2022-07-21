@@ -1,1 +1,30 @@
-
+body {
+  background: linear-gradient(
+    89deg,
+    rgb(253, 220, 155) 26.2%,
+    rgb(255, 215, 165) 48.5%
+  );
+}
+.App {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #df7861;
+  border: 1px solid #df7861;
+  border-radius: 12px;
+  box-shadow: 0 5px 8px rgb(0 0 0 / 25%);
+}
+.App .task-overview {
+  padding: 16px;
+  max-width: 460px;
+}
+.App h1 {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+}
+.App input {
+  padding: 10px;
+}
+.App btn {
+  color: aqua;
+}
