@@ -12,8 +12,6 @@ body {
   border: 1px solid #df7861;
   border-radius: 12px;
   box-shadow: 0 5px 8px rgb(0 0 0 / 25%);
-}
-.App .task-overview {
   padding: 16px;
   max-width: 460px;
 }
@@ -22,9 +20,6 @@ body {
   font-size: 28px;
   text-align: center;
 }
-.App input {
+.TaskForm input {
   padding: 10px;
-}
-.App btn {
-  color: aqua;
 }
