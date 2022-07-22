@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 
-export default function TaskForm() {
+export default function TaskForm(props) {
   const [input, setInput] = useState("");
 
   function submitTask(event) {
     event.preventDefault();
+    props.addTask(input);
     setInput("");
   }
 
@@ -25,14 +26,13 @@ export default function TaskForm() {
                   autoFocus="on"
                   className="form-control mt-3"
                   onChange={updateTask}
-                  value={input}
                 />
               </div>
               <div className="col-3">
                 <input
                   type="submit"
                   value="Add"
-                  class="btn btn-outline-warning mt-3 text-white"
+                  className="btn btn-outline-warning mt-3 text-white"
                 />
               </div>
             </div>
