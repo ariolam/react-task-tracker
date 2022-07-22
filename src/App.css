@@ -13,7 +13,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 5px 8px rgb(0 0 0 / 25%);
   padding: 16px;
-  max-width: 460px;
+  max-width: 545px;
+  min-height: 580px;
 }
 .App h1 {
   color: white;
@@ -21,5 +22,18 @@ body {
   text-align: center;
 }
 .TaskForm input {
-  padding: 10px;
+  padding: 13px;
+}
+.Task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: white;
+  background-color: #df7861;
+  border: 1px solid white;
+  font-size: 17px;
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
 }

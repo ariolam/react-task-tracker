@@ -16,7 +16,7 @@ export default function TaskForm(props) {
   return (
     <div className="TaskForm">
       <div className="container">
-        <div className="task-overview">
+        <div className="task-overview mb-5">
           <form onSubmit={submitTask}>
             <div className="row">
               <div className="col-9">
@@ -26,6 +26,7 @@ export default function TaskForm(props) {
                   autoFocus="on"
                   className="form-control mt-3"
                   onChange={updateTask}
+                  value={input}
                 />
               </div>
               <div className="col-3">
