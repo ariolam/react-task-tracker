@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import TaskForm from "./TaskForm";
 import TaskItem from "./TaskItem";
+import Footer from "./Footer";
 
-function App() {
+export default function App() {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (text) => {
@@ -30,23 +31,23 @@ function App() {
     });
     setTasks(updatedTasks);
   };
-
   return (
-    <div className="App">
-      <h1>Today is a wonderful day</h1>
-      <TaskForm addTask={addTask} />
-      {tasks.map((task, index) => {
-        return (
-          <TaskItem
-            task={task}
-            key={index}
-            deleteTask={deleteTask}
-            completeTask={completeTask}
-          />
-        );
-      })}
+    <div>
+      <div className="App">
+        <h1>Today is a wonderful day</h1>
+        <TaskForm addTask={addTask} />
+        {tasks.map((task, index) => {
+          return (
+            <TaskItem
+              task={task}
+              key={index}
+              deleteTask={deleteTask}
+              completeTask={completeTask}
+            />
+          );
+        })}
+      </div>
+      <Footer />
     </div>
   );
 }
-
-export default App;
