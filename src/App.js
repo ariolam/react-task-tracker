@@ -15,12 +15,35 @@ function App() {
     let newTasks = [task, ...tasks];
     setTasks(newTasks);
   };
+
+  const deleteTask = (id) => {
+    let updatedTasks = [...tasks].filter((task) => task.id !== id);
+    setTasks(updatedTasks);
+  };
+
+  const completeTask = (id) => {
+    let updatedTasks = tasks.map((task) => {
+      if (task.id === id) {
+        task.completed = !task.completed;
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  };
+
   return (
     <div className="App">
       <h1>Today is a wonderful day</h1>
       <TaskForm addTask={addTask} />
       {tasks.map((task, index) => {
-        return <TaskItem task={task} key={index} />;
+        return (
+          <TaskItem
+            task={task}
+            key={index}
+            deleteTask={deleteTask}
+            completeTask={completeTask}
+          />
+        );
       })}
     </div>
   );
